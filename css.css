@@ -1,11 +1,7 @@
-/* ==========================================================================
-   1. IMPORTACIÓN DE FUENTES PREMIUM
-   ========================================================================== */
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 
-/* ==========================================================================
-   2. VARIABLES Y DISEÑO BASE (COLOR SYSTEM)
-   ========================================================================== */
+
 :root {
     --primary: #00d4ff;
     --primary-dark: #008cb3;
@@ -34,9 +30,7 @@ body {
     letter-spacing: -0.01em;
 }
 
-/* ==========================================================================
-   3. NAVEGACIÓN Y HERO SECTION
-   ========================================================================== */
+
 .navbar {
     padding: 15px 0;
     position: fixed;
@@ -160,9 +154,7 @@ body {
     box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3);
 }
 
-/* ==========================================================================
-   4. ESTRUCTURA CENTRAL Y SECCIONES
-   ========================================================================== */
+
 .main-content {
     max-width: 1100px;
     margin: 0 auto;
@@ -196,7 +188,7 @@ body {
     border-radius: 4px;
 }
 
-/* Ficha Académica */
+
 .main-intro {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -225,7 +217,7 @@ body {
     font-weight: 500;
 }
 
-/* Bloques Informativos Planos */
+
 .info-card {
     background: var(--card-bg);
     border: 1px solid var(--glass-border);
@@ -243,9 +235,7 @@ body {
     color: #cbd5e1;
 }
 
-/* ==========================================================================
-   5. REJILLA ASIMÉTRICA INTEGRAL (BENTO GRID - ULTRA ESTABLE)
-   ========================================================================== */
+
 .bento-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -272,12 +262,12 @@ body {
                 box-shadow 0.4s ease;
 }
 
-/* Dimensionamiento asimétrico estricto */
+
 .card-wide { grid-column: span 4; }
 .card-normal { grid-column: span 2; }
 .card-full { grid-column: span 6; }
 
-/* Elementos internos de las Tarjetas Bento */
+
 .card-glow {
     position: absolute;
     top: 0;
@@ -320,7 +310,7 @@ body {
     margin: 0;
 }
 
-/* Resaltado de conceptos técnicos nativos en mono */
+
 .bento-card em {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.82rem;
@@ -332,7 +322,7 @@ body {
     border: 1px solid rgba(0, 212, 255, 0.1);
 }
 
-/* Efectos Interactivos (Hover unificado) */
+
 .bento-card:hover {
     transform: translateY(-4px);
     border-color: rgba(0, 212, 255, 0.25);
@@ -342,9 +332,7 @@ body {
 .bento-card:hover .card-glow { opacity: 1; }
 .bento-card:hover .card-header i { color: var(--primary); }
 
-/* ==========================================================================
-   6. BLOQUE DE IMPACTO INDUSTRIAL Y FOOTER
-   ========================================================================== */
+
 .impact-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -396,9 +384,7 @@ body {
     margin-top: 50px;
 }
 
-/* ==========================================================================
-   7. MEDIA QUERIES RESPONSIVE COMPLETO
-   ========================================================================== */
+
 @media (max-width: 900px) {
     .bento-grid {
         display: flex !important;
@@ -412,7 +398,7 @@ body {
         font-size: 2.3rem;
     }
 }
-/* Contenedor de la imagen con posicionamiento relativo */
+
 .image-border {
     width: 130px;
     height: 130px;
@@ -425,7 +411,7 @@ body {
     cursor: pointer;
 }
 
-/* Base común para ambas imágenes ocupando todo el círculo */
+
 .profile-pic {
     width: 100%;
     height: 100%;
@@ -437,7 +423,7 @@ body {
     transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Estado inicial */
+
 .static-img {
     opacity: 1;
     z-index: 2; /* Se muestra por encima al principio */
@@ -448,9 +434,7 @@ body {
     z-index: 1; /* Oculto atrás */
 }
 
-/* ==========================================================================
-   EFECTO HOVER (INTERCAMBIO DE IMÁGENES)
-   ========================================================================== */
+
 .image-border:hover .static-img {
     opacity: 0; /* Desvanece la foto estática */
 }
