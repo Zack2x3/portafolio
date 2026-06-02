@@ -1,11 +1,20 @@
+/* ==========================================================================
+   1. IMPORTACIÓN DE FUENTES PREMIUM
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ==========================================================================
+   2. VARIABLES Y DISEÑO BASE (COLOR SYSTEM)
+   ========================================================================== */
 :root {
     --primary: #00d4ff;
     --primary-dark: #008cb3;
     --dark-bg: #080c14;
-    --card-bg: rgba(255, 255, 255, 0.04);
-    --glass-border: rgba(255, 255, 255, 0.08);
+    --card-bg: rgba(255, 255, 255, 0.02);
+    --glass-border: rgba(255, 255, 255, 0.06);
     --text-white: #f8fafc;
     --text-gray: #94a3b8;
+    --bg-glow: radial-gradient(circle at 50% -20%, rgba(0, 212, 255, 0.15) 0%, rgba(8, 12, 20, 0) 65%);
 }
 
 * {
@@ -17,12 +26,17 @@
 
 body {
     background-color: var(--dark-bg);
+    background-image: var(--bg-glow);
+    background-attachment: fixed;
     color: var(--text-white);
-    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
     line-height: 1.6;
+    letter-spacing: -0.01em;
 }
 
-/* Navbar mejorada */
+/* ==========================================================================
+   3. NAVEGACIÓN Y HERO SECTION
+   ========================================================================== */
 .navbar {
     padding: 15px 0;
     position: fixed;
@@ -31,6 +45,7 @@ body {
     z-index: 1000;
     background: rgba(8, 12, 20, 0.85);
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--glass-border);
 }
 
@@ -44,192 +59,356 @@ body {
 }
 
 .logo {
-    font-weight: 800;
+    color: var(--text-white);
     text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
 }
 
-.logo span { color: var(--primary); }
+.logo span {
+    color: var(--primary);
+    font-weight: 300;
+}
 
-.nav-links { display: flex; list-style: none; }
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
 .nav-links a {
     color: var(--text-gray);
     text-decoration: none;
-    margin-left: 25px;
     font-size: 0.9rem;
     font-weight: 500;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
-.nav-links a:hover { color: var(--primary); }
+.nav-links a:hover {
+    color: var(--primary);
+}
 
-/* Hero */
 .hero {
-    height: 85vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 190px 0 80px 0;
     text-align: center;
-    background: radial-gradient(circle at 50% 0%, #1e293b 0%, #080c14 70%);
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .image-border {
-    width: 180px;
-    height: 180px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
     padding: 4px;
-    background: linear-gradient(135deg, var(--primary), #7000ff);
-    border-radius: 40px;
-    margin: 0 auto 20px;
-    box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
+    background: linear-gradient(135deg, var(--primary), transparent);
+    margin: 0 auto 25px auto;
 }
 
 .profile-pic {
     width: 100%;
     height: 100%;
-    border-radius: 36px;
+    border-radius: 50%;
     object-fit: cover;
-    background: #000;
 }
 
-h1 { font-size: 3rem; font-weight: 800; margin-bottom: 10px; }
-.tagline { color: var(--primary); font-size: 1.1rem; opacity: 0.9; }
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: -0.03em;
+    background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-.social-box { margin-top: 20px; }
+.tagline {
+    color: var(--text-gray);
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.social-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
 .social-box a {
-    color: white;
-    font-size: 1.5rem;
-    margin: 0 12px;
+    color: var(--text-white);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
     transition: 0.3s ease;
 }
 
-.social-box a:hover { color: var(--primary); transform: translateY(-3px); display: inline-block; }
-
-/* Contenedores */
-.main-content {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 40px 20px;
+.social-box a:hover {
+    color: var(--dark-bg);
+    background: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3);
 }
 
-.section { margin-bottom: 100px; }
+/* ==========================================================================
+   4. ESTRUCTURA CENTRAL Y SECCIONES
+   ========================================================================== */
+.main-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    margin-bottom: 90px;
+}
 
 .title {
-    text-align: left;
-    margin-bottom: 40px;
-    font-size: 1.8rem;
-    border-left: 4px solid var(--primary);
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    position: relative;
     padding-left: 15px;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
+.title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 25%;
+    height: 50%;
+    width: 4px;
+    background: var(--primary);
+    border-radius: 4px;
+}
+
+/* Ficha Académica */
 .main-intro {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
     background: var(--card-bg);
-    padding: 30px;
-    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: 1px solid var(--glass-border);
+    padding: 35px;
+    border-radius: 24px;
 }
 
-/* Bento Grid */
+.intro-item strong {
+    color: var(--primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.intro-item p {
+    color: var(--text-white);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Bloques Informativos Planos */
+.info-card {
+    background: var(--card-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.info-body {
+    padding: 40px;
+}
+
+.info-body p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #cbd5e1;
+}
+
+/* ==========================================================================
+   5. REJILLA ASIMÉTRICA INTEGRAL (BENTO GRID - ULTRA ESTABLE)
+   ========================================================================== */
 .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.bento-card {
+    background: rgba(255, 255, 255, 0.015);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 32px;
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                border-color 0.4s ease, 
+                box-shadow 0.4s ease;
+}
+
+/* Dimensionamiento asimétrico estricto */
+.card-wide { grid-column: span 4; }
+.card-normal { grid-column: span 2; }
+.card-full { grid-column: span 6; }
+
+/* Elementos internos de las Tarjetas Bento */
+.card-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top left, rgba(0, 212, 255, 0.04) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.card-header i {
+    font-size: 1.2rem;
+    color: var(--text-gray);
+    width: 24px;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.bento-card h5 {
+    color: var(--text-white);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: -0.01em;
+}
+
+.bento-card p {
+    font-size: 0.92rem;
+    color: var(--text-gray);
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* Resaltado de conceptos técnicos nativos en mono */
+.bento-card em {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.82rem;
+    font-style: normal;
+    padding: 3px 8px;
+    border-radius: 6px;
+    color: var(--primary);
+    background: rgba(0, 212, 255, 0.05);
+    border: 1px solid rgba(0, 212, 255, 0.1);
+}
+
+/* Efectos Interactivos (Hover unificado) */
+.bento-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(0, 212, 255, 0.25);
+    box-shadow: 0 12px 30px rgba(0, 212, 255, 0.05);
+}
+
+.bento-card:hover .card-glow { opacity: 1; }
+.bento-card:hover .card-header i { color: var(--primary); }
+
+/* ==========================================================================
+   6. BLOQUE DE IMPACTO INDUSTRIAL Y FOOTER
+   ========================================================================== */
+.impact-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
 
-.bento-item {
-    background: var(--card-bg);
-    padding: 30px;
-    border-radius: 24px;
-    text-decoration: none;
-    color: white;
-    border: 1px solid var(--glass-border);
-    transition: 0.4s;
+.impact-badge {
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    padding: 25px;
+    border-radius: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
 }
 
-.icon-circle {
-    width: 50px;
-    height: 50px;
-    background: rgba(0, 212, 255, 0.1);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
+.impact-badge:hover {
+    background: rgba(0, 212, 255, 0.02);
+    border-color: rgba(0, 212, 255, 0.2);
+    transform: translateY(-3px);
 }
 
-.bento-item i { font-size: 1.5rem; color: var(--primary); }
-
-.bento-item:hover {
-    border-color: var(--primary);
-    background: rgba(0, 212, 255, 0.05);
-    transform: translateY(-5px);
-}
-
-/* --- ESTILO DE INFO MEJORADO --- */
-.info-card {
-    background: var(--card-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: 24px;
-    margin-bottom: 25px;
-    overflow: hidden;
-    transition: 0.3s;
-}
-
-.info-card:hover {
-    border-color: rgba(0, 212, 255, 0.3);
-}
-
-.info-header {
-    background: rgba(255, 255, 255, 0.02);
-    padding: 20px 30px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    border-bottom: 1px solid var(--glass-border);
-}
-
-.info-header i {
+.impact-badge i {
     color: var(--primary);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
 }
 
-.info-header h3 {
-    font-size: 1.1rem;
-    font-weight: 600;
-}
-
-.info-body {
-    padding: 30px;
-}
-
-.info-body p {
-    color: var(--text-gray);
-    margin-bottom: 20px;
+.impact-badge h4 {
     font-size: 1rem;
-}
-
-/* Etiquetas (Tags) */
-.tag-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.tag {
-    background: rgba(0, 212, 255, 0.08);
-    color: var(--primary);
-    padding: 6px 14px;
-    border-radius: 100px;
-    font-size: 0.8rem;
+    color: var(--text-white);
+    margin-bottom: 6px;
     font-weight: 600;
-    border: 1px solid rgba(0, 212, 255, 0.2);
 }
 
-/* Footer */
+.impact-badge p {
+    font-size: 0.85rem;
+    color: var(--text-gray);
+    margin: 0;
+}
+
 .footer {
     text-align: center;
-    padding: 60px;
+    padding: 40px 0;
     color: var(--text-gray);
     font-size: 0.85rem;
     border-top: 1px solid var(--glass-border);
+    margin-top: 50px;
+}
+
+/* ==========================================================================
+   7. MEDIA QUERIES RESPONSIVE COMPLETO
+   ========================================================================== */
+@media (max-width: 900px) {
+    .bento-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px;
+    }
+    .card-wide, .card-normal, .card-full {
+        width: 100% !important;
+    }
+    .hero h1 {
+        font-size: 2.3rem;
+    }
 }
