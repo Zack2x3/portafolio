@@ -14,8 +14,9 @@
             <a href="#" class="logo">LUIS<span>ROCCO</span></a>
             <ul class="nav-links">
                 <li><a href="#about">Inicio</a></li>
-                <li><a href="#skills">Habilidades</a></li>
-                <li><a href="#details">Detalles</a></li>
+                <li><a href="#history-section">Evolución</a></li>
+                <li><a href="#concepts-section">Arquitectura</a></li>
+                <li><a href="#impact-section">Impacto</a></li>
             </ul>
         </div>
     </nav>
@@ -26,7 +27,7 @@
                 <img src="try.jpg" alt="Luis Rocco" class="profile-pic">
             </div>
             <h1>Luis Rocco</h1>
-            <p class="tagline">Estudiante de Informática de pregrado de la UBO</p>
+            <p class="tagline">Ingeniería en Informática | Estudiante de Pregrado</p>
             
             <div class="social-box">
                 <a href="https://github.com/Zack2x3" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
@@ -37,83 +38,124 @@
     </header>
 
     <main class="main-content">
-        <section id="about" class="section">
-            <h2 class="title">Perfil Profesional</h2>
-            <div class="main-intro">
-                <p>Especialista en formación con enfoque en la <strong>arquitectura de sistemas y redes</strong>. Combino la resolución lógica de problemas con el despliegue de infraestructuras escalables en la nube y la optimización de hardware de alto rendimiento.</p>
+        <!-- SECCIÓN 1: FICHA ACADÉMICA -->
+        <section id="about" class="section" style="margin-bottom: 80px;">
+            <h2 class="title">Ficha Académica</h2>
+            <div class="main-intro" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                <div>
+                    <strong style="color: var(--primary);">Carrera:</strong>
+                    <p style="color: var(--text-white); margin-top: 5px;">Ingeniería en Informática</p>
+                </div>
+                <div>
+                    <strong style="color: var(--primary);">Institución:</strong>
+                    <p style="color: var(--text-white); margin-top: 5px;">Universidad Bernardo O'Higgins (UBO)</p>
+                </div>
+                <div>
+                    <strong style="color: var(--primary);">Nivel Actual:</strong>
+                    <p style="color: var(--text-white); margin-top: 5px;">Primer Año (Pregrado)</p>
+                </div>
             </div>
         </section>
 
-        <section id="skills" class="section">
-            <h2 class="title">Especialidades</h2>
-            <div class="bento-grid">
-                <a href="#networking-info" class="bento-item">
-                    <div class="icon-circle"><i class="fas fa-network-wired"></i></div>
-                    <h3>Networking</h3>
-                    <p>Cisco Academy & LAN/WAN</p>
-                </a>
-                <a href="#cloud-info" class="bento-item">
-                    <div class="icon-circle"><i class="fas fa-cloud"></i></div>
-                    <h3>Cloud Computing</h3>
-                    <p>AWS & SageMaker</p>
-                </a>
-                <a href="#ai-info" class="bento-item">
-                    <div class="icon-circle"><i class="fas fa-brain"></i></div>
-                    <h3>Inteligencia Artificial</h3>
-                    <p>Modelos & Conceptos Clave</p>
-                </a>
-                <a href="#logic-info" class="bento-item">
-                    <div class="icon-circle"><i class="fas fa-terminal"></i></div>
-                    <h3>Lógica</h3>
-                    <p>Algoritmos & Álgebra</p>
-                </a>
-                <a href="#hw-info" class="bento-item">
-                    <div class="icon-circle"><i class="fas fa-memory"></i></div>
-                    <h3>Hardware</h3>
-                    <p>Soporte & Optimización</p>
-                </a>
+        <!-- SECCIÓN 2: LÍNEA HISTÓRICA PROFUNDA -->
+        <section id="history-section" class="section" style="margin-bottom: 80px;">
+            <h2 class="title">Contexto e Evolución Histórica</h2>
+            <div class="info-card" style="border-left: 4px solid var(--primary);">
+                <div class="info-body" style="padding: 35px;">
+                    <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 20px;">
+                        Iniciada formalmente en la década de 1950 a partir de las bases teóricas de <strong>Alan Turing</strong> y la prueba de la computabilidad, la disciplina de la Inteligencia Artificial ha transitado desde la ejecución de sistemas lógicos basados en reglas rígidas y álgebra booleana, hacia arquitecturas probabilísticas avanzadas.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.7; margin: 0;">
+                        Este cambio de paradigma sustituye la programación explícita por sistemas dinámicos orientados al <strong>procesamiento masivo de datos (Big Data)</strong>, optimizando la automatización y permitiendo la resolución de problemas multidimensionales no lineales que definen el estado del arte en la actualidad.
+                    </p>
+                </div>
             </div>
         </section>
 
-        <section id="details" class="section">
-            <h2 class="title">Despliegue de Información</h2>
-            
-
-            <div id="ai-info" class="info-card">
-                <div class="info-header">
-                    <i class="fas fa-brain"></i>
-                    <h3>Inteligencia Artificial</h3>
+        <!-- SECCIÓN 3: ARQUITECTURA DE CONCEPTOS (CELDAS MEJORADAS) -->
+        <section id="concepts-section" class="section" style="margin-bottom: 80px;">
+            <h2 class="title">Estructuraciones y Paradigmas Técnicos</h2>
+            <div class="ai-concepts-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                
+                <!-- IA Débil -->
+                <div style="background: var(--card-bg); padding: 25px; border-radius: 16px; border: 1px solid var(--glass-border); border-top: 4px solid #22c55e; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+                    <h5 style="color: white; margin-bottom: 12px; font-size: 1.1rem;"><span style="color: #22c55e; margin-right: 8px;">●</span>IA Débil (Narrow AI)</h5>
+                    <p style="font-size: 0.9rem; color: var(--text-gray); margin: 0; line-height: 1.5;">
+                        Sistemas deterministas o probabilísticos programados y acotados estrictamente para resolver tareas operativas específicas. Operan bajo un entorno de variables cerrado y sin autoconciencia, tales como algoritmos de optimización de búsqueda, motores de recomendación comercial y asistentes de voz basados en flujos predefinidos.
+                    </p>
                 </div>
-                <div class="info-body">
-                    <p style="margin-bottom: 25px;"><strong>Historia:</strong> La inteligencia artificial surge en la década de 1950 con investigadores como Alan Turing. Con el tiempo evolucionó desde sistemas simples hasta tecnologías avanzadas basadas en datos. Hoy se utiliza en aplicaciones como asistentes virtuales, redes sociales y sistemas inteligentes.</p>
-                    
-                    <h4 style="color: var(--text-white); margin-bottom: 15px; font-size: 1rem;">Conceptos Core:</h4>
-                    <div class="ai-concepts-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; margin-bottom: 25px;">
-                        <div style="background: rgba(255,255,255,0.02); padding: 15px; border-radius: 12px; border: 1px solid var(--glass-border); border-left: 4px solid #22c55e;">
-                            <h5 style="color: white; margin-bottom: 5px;"><span style="color: #22c55e;">●</span> IA Débil</h5>
-                            <p style="font-size: 0.85rem; color: var(--text-gray); margin: 0;">Realiza tareas específicas como asistentes virtuales o sistemas de recomendación, sin tener conciencia propia.</p>
-                        </div>
-                        <div style="background: rgba(255,255,255,0.02); padding: 15px; border-radius: 12px; border: 1px solid var(--glass-border); border-left: 4px solid #ef4444;">
-                            <h5 style="color: white; margin-bottom: 5px;"><span style="color: #ef4444;">●</span> IA Fuerte</h5>
-                            <p style="font-size: 0.85rem; color: var(--text-gray); margin: 0;">Busca imitar completamente la inteligencia humana, incluyendo razonamiento, aprendizaje y toma de decisiones autónoma.</p>
-                        </div>
-                        <div style="background: rgba(255,255,255,0.02); padding: 15px; border-radius: 12px; border: 1px solid var(--glass-border); border-left: 4px solid #3b82f6;">
-                            <h5 style="color: white; margin-bottom: 5px;"><span style="color: #3b82f6;">●</span> Machine Learning</h5>
-                            <p style="font-size: 0.85rem; color: var(--text-gray); margin: 0;">Permite a los sistemas aprender automáticamente a partir de datos y mejorar su rendimiento con la experiencia.</p>
-                        </div>
-                        <div style="background: rgba(255,255,255,0.02); padding: 15px; border-radius: 12px; border: 1px solid var(--glass-border); border-left: 4px solid #a855f7;">
-                            <h5 style="color: white; margin-bottom: 5px;"><span style="color: #a855f7;">●</span> Deep Learning</h5>
-                            <p style="font-size: 0.85rem; color: var(--text-gray); margin: 0;">Utiliza redes neuronales profundas para analizar grandes cantidades de datos y reconocer patrones complejos.</p>
-                        </div>
-                        <div style="background: rgba(255,255,255,0.02); padding: 15px; border-radius: 12px; border: 1px solid var(--glass-border); border-left: 4px solid #f59e0b;">
-                            <h5 style="color: white; margin-bottom: 5px;"><span style="color: #f59e0b;">●</span> PLN</h5>
-                            <p style="font-size: 0.85rem; color: var(--text-gray); margin: 0;">Permite a las máquinas entender, interpretar y generar lenguaje humano en aplicaciones como chatbots.</p>
-                        </div>
-                    </div>
 
-                    <p><strong>Importancia:</strong> La IA permite automatizar procesos, mejorar la eficiencia y reducir errores. Se aplica en salud, educación, seguridad y transporte, impulsando la innovación tecnológica.</p>
+                <!-- IA Fuerte -->
+                <div style="background: var(--card-bg); padding: 25px; border-radius: 16px; border: 1px solid var(--glass-border); border-top: 4px solid #ef4444; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+                    <h5 style="color: white; margin-bottom: 12px; font-size: 1.1rem;"><span style="color: #ef4444; margin-right: 8px;">●</span>IA Fuerte (AGI)</h5>
+                    <p style="font-size: 0.9rem; color: var(--text-gray); margin: 0; line-height: 1.5;">
+                        Modelos teórico-operativos complejos diseñados para replicar de forma equivalente o superior las facultades cognitivas humanas. Involucra el desarrollo de razonamiento abstracto adaptativo, autoaprendizaje contextual, representación del conocimiento interdomain y la toma de decisiones autónoma ante escenarios completamente imprevistos.
+                    </p>
+                </div>
+
+                <!-- Machine Learning -->
+                <div style="background: var(--card-bg); padding: 25px; border-radius: 16px; border: 1px solid var(--glass-border); border-top: 4px solid #3b82f6; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+                    <h5 style="color: white; margin-bottom: 12px; font-size: 1.1rem;"><span style="color: #3b82f6; margin-right: 8px;">●</span>Machine Learning</h5>
+                    <p style="font-size: 0.9rem; color: var(--text-gray); margin: 0; line-height: 1.5;">
+                        Subcampo enfocado en el despliegue de modelos matemáticos y estadísticos que estructuran un aprendizaje automatizado. Utiliza enfoques supervisados, no supervisados y por refuerzo para identificar patrones ocultos dentro de conjuntos de datos, minimizando funciones de pérdida e incrementando la precisión predictiva de forma matemática.
+                    </p>
+                </div>
+
+                <!-- Deep Learning -->
+                <div style="background: var(--card-bg); padding: 25px; border-radius: 16px; border: 1px solid var(--glass-border); border-top: 4px solid #a855f7; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+                    <h5 style="color: white; margin-bottom: 12px; font-size: 1.1rem;"><span style="color: #a855f7; margin-right: 8px;">●</span>Deep Learning</h5>
+                    <p style="font-size: 0.9rem; color: var(--text-gray); margin: 0; line-height: 1.5;">
+                        Procesamiento avanzado basado en Redes Neuronales Artificiales Profundas con múltiples capas latentes (ocultas). Especializado en la extracción jerárquica de características de datos no estructurados, permitiendo la clasificación y generación compleja a través de algoritmos de propagación hacia atrás (backpropagation).
+                    </p>
+                </div>
+
+                <!-- PLN -->
+                <div style="background: var(--card-bg); padding: 25px; border-radius: 16px; border: 1px solid var(--glass-border); border-top: 4px solid #f59e0b; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+                    <h5 style="color: white; margin-bottom: 12px; font-size: 1.1rem;"><span style="color: #f59e0b; margin-right: 8px;">●</span>PLN (Procesamiento del Lenguaje Natural)</h5>
+                    <p style="font-size: 0.9rem; color: var(--text-gray); margin: 0; line-height: 1.5;">
+                        Conjunción de lingüística computacional y modelos de IA orientada a la interpretación, análisis y generación sintáctica/semántica del lenguaje humano. Base fundamental para el entrenamiento de arquitecturas de atención (Transformers), análisis de sentimiento y el despliegue de agentes conversacionales inteligentes masivos.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: ÁREAS DE IMPACTO CON GRID DE ICONOS -->
+        <section id="impact-section" class="section" style="margin-bottom: 40px;">
+            <h2 class="title">Áreas de Impacto e Innovación Tecnológica</h2>
+            <div class="info-card" style="margin-bottom: 30px;">
+                <div class="info-body" style="padding: 35px;">
+                    <p style="font-size: 1.1rem; line-height: 1.7; margin: 0;">
+                        La integración sistemática de soluciones de IA reconfigura la cadena de producción global. Al mitigar errores operativos mediante la automatización de procesos complejos, actúa como catalizador crucial en la transformación metodológica e industrial del mercado contemporáneo.
+                    </p>
                 </div>
             </div>
+
+            <!-- Fila de micro-tarjetas de impacto industrial -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--glass-border); padding: 20px; border-radius: 12px; text-align: center;">
+                    <i class="fas fa-heartbeat" style="color: var(--primary); font-size: 1.5rem; margin-bottom: 10px;"></i>
+                    <h4 style="font-size: 1rem; color: white; margin-bottom: 5px;">Salud</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-gray); margin: 0;">Diagnóstico por imágenes y medicina personalizada.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--glass-border); padding: 20px; border-radius: 12px; text-align: center;">
+                    <i class="fas fa-graduation-cap" style="color: var(--primary); font-size: 1.5rem; margin-bottom: 10px;"></i>
+                    <h4 style="font-size: 1rem; color: white; margin-bottom: 5px;">Educación</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-gray); margin: 0;">Sistemas de tutoría adaptativa y automatización analítica.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--glass-border); padding: 20px; border-radius: 12px; text-align: center;">
+                    <i class="fas fa-truck" style="color: var(--primary); font-size: 1.5rem; margin-bottom: 10px;"></i>
+                    <h4 style="font-size: 1rem; color: white; margin-bottom: 5px;">Logística</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-gray); margin: 0;">Optimización de flujos de distribución y rutas predictivas.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--glass-border); padding: 20px; border-radius: 12px; text-align: center;">
+                    <i class="fas fa-shield-alt" style="color: var(--primary); font-size: 1.5rem; margin-bottom: 10px;"></i>
+                    <h4 style="font-size: 1rem; color: white; margin-bottom: 5px;">Ciberseguridad</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-gray); margin: 0;">Detección temprana de anomalías e intrusiones en tiempo real.</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
         <p>2026 &copy; Luis Rocco - Desarrollado en Chile para el mundo</p>
